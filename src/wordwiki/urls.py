@@ -5,8 +5,10 @@ admin.autodiscover()
 
 from django.http import HttpResponse
 
+from pprint import pprint, pformat
+
 def main(request):
-    return HttpResponse("Poop.")
+    return HttpResponse("Poop.<pre>{}</pre>".format(pformat(request)))
 
 urlpatterns = patterns('',
     # Examples:
@@ -15,8 +17,8 @@ urlpatterns = patterns('',
 
     url(r'^$', main, name='home'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^word/[a-z]+$', '', name='pages'),
-    url(r'^word/[a-z]+/edit', '', name='pages'),
-    url(r'^add-word/', '', name='pages'),
-    url(r'^word/$', '', name='pages'),
+    url(r'^word/[a-z]+$', main, name='pages'),
+    #url(r'^word/[a-z]+/edit', '', name='pages'),
+    #url(r'^add-word/', '', name='pages'),
+    #url(r'^word/$', '', name='pages'),
 )
