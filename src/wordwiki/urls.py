@@ -5,10 +5,9 @@ admin.autodiscover()
 
 from django.http import HttpResponse
 
-from pprint import pprint, pformat
 
 def main(request):
-    return HttpResponse("Poop.<pre>{}</pre>".format(pformat(request)))
+    return HttpResponse("Poop.")
 
 urlpatterns = patterns('',
     # Examples:
