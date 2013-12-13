@@ -1,1 +1,1 @@
-web: gunicorn wordwiki.wsgi.application
+web: gunicorn wordwiki.wsgi
