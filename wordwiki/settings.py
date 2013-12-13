@@ -50,7 +50,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'wordwiki.urls'
 
-WSGI_APPLICATION = 'wordwiki.wsgi.application'
+WSGI_APPLICATION = 'wordwiki.wsgi'
 
 
 # Database
