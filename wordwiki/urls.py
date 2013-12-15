@@ -7,7 +7,7 @@ from django.http import HttpResponse
 
 
 def main(request):
-    return HttpResponse("Poop.")
+    return HttpResponse('<img src="{{ STATIC_URL }}Gunter.jpg" title="Quack!" alt="Quack!"')
 
 urlpatterns = patterns('',
     # Examples:
