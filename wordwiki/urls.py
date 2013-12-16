@@ -21,6 +21,5 @@ urlpatterns = patterns('',
     #url(r'^word/[a-z]+$', main, name='pages'),
     #url(r'^word/[a-z]+/edit', '', name='pages'),
     #url(r'^add-word/', '', name='pages'),
-    url(r'^word/$', pages.WordIndexView.as_view()),
-    #url(r'^word/$', pages.views.index, name='word'),
+    url(r'^word/$', pages.Models.WordIndexView.as_view()),
 )
