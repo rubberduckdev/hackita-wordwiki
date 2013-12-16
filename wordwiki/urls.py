@@ -6,6 +6,7 @@ admin.autodiscover()
 from django.http import HttpResponse
 
 import pages.views
+import pages.models
 
 
 def main(request):
@@ -21,5 +22,5 @@ urlpatterns = patterns('',
     #url(r'^word/[a-z]+$', main, name='pages'),
     #url(r'^word/[a-z]+/edit', '', name='pages'),
     #url(r'^add-word/', '', name='pages'),
-    url(r'^word/$', pages.Models.WordIndexView.as_view()),
+    url(r'^word/$', pages.views.WordIndexView.as_view()),
 )
