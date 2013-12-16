@@ -5,6 +5,8 @@ admin.autodiscover()
 
 from django.http import HttpResponse
 
+import pages.views
+
 
 def main(request):
     return HttpResponse('<img src="{{ STATIC_URL }}Gunter.jpg" title="Quack!" alt="Quack!"')
@@ -19,5 +21,5 @@ urlpatterns = patterns('',
     #url(r'^word/[a-z]+$', main, name='pages'),
     #url(r'^word/[a-z]+/edit', '', name='pages'),
     #url(r'^add-word/', '', name='pages'),
-    url(r'^word/$', pages.view.index, name='pages'),
+    url(r'^word/$', pages.views.index, name='word'),
 )
