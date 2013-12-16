@@ -2,14 +2,14 @@
 
 from django.http import HttpResponse
 from django.template import RequestContext, loader
+from django.views import generic
 
 from pages.models import Page
 
-def index(request):
-    pages = Page.objects.all()
-    template = loader.get_template('pages/page_list.html')
-    context = RequestContext(
-        request,
-        {'pages': pages},
-    )
-    return HttpResponse(template.render(context))
+class WordIndexView(generic.ListView)
+    template_name = 'pages/page_list.html'
+    context_object_name = 'words_list'
+
+    def get_queryset(self):
+        """ Return the words index """
+        return Page.objects.all()
