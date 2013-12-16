@@ -16,7 +16,7 @@ urlpatterns = patterns('',
 
     url(r'^$', main, name='home'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^word/[a-z]+$', main, name='pages'),
+    #url(r'^word/[a-z]+$', main, name='pages'),
     #url(r'^word/[a-z]+/edit', '', name='pages'),
     #url(r'^add-word/', '', name='pages'),
     #url(r'^word/$', '', name='pages'),
