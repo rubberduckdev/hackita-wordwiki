@@ -6,7 +6,7 @@ from django.views import generic
 
 from pages.models import Page
 
-class WordIndexView(generic.ListView)
+class WordIndexView(generic.ListView):
     template_name = 'pages/page_list.html'
     context_object_name = 'words_list'
 
