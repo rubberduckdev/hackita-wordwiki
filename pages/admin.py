@@ -7,7 +7,7 @@ class PageAdmin(admin.ModelAdmin):
         (None,
          {'fields': ['name']}
          ),
-        (None,
+        ('Contents',
          {'fields': ['cotents'],
           'classes': ['collapse']}),
     ]
