@@ -3,13 +3,6 @@ from pages.models import Page
 
 class PageAdmin(admin.ModelAdmin):
     """ Page's ModelAdmin """
-    fieldsets = [
-        (None,
-         {'fields': ['name']}
-         ),
-        ('Contents',
-         {'fields': ['cotents'],
-          'classes': ['collapse']}),
-    ]
+    fields = ['name', 'cotents']
 
 admin.site.register(Page, PageAdmin)
