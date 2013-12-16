@@ -19,5 +19,5 @@ urlpatterns = patterns('',
     #url(r'^word/[a-z]+$', main, name='pages'),
     #url(r'^word/[a-z]+/edit', '', name='pages'),
     #url(r'^add-word/', '', name='pages'),
-    url(r'^word/$', include(pages) name='pages'),
+    url(r'^word/$', include(pages), name='pages'),
 )
