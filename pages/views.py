@@ -7,7 +7,7 @@ from pages.models import Page
 
 def index(request):
     pages = Page.objects.all()
-    template = loader.get_template('pages/index.html')
+    template = loader.get_template('pages/page_list.html')
     context = RequestContext(
         request,
         {'pages': pages},
